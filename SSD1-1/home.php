@@ -38,28 +38,23 @@
 						<h2>Show Posts </h2>
 					</span>
 
-					<div class="wrap-input100 validate-input" >
-					<input class="input100" type="text" name="post" value="<?php echo $_POST['updatepost']?>">
-
-						
-						
-						
-<?php
-require_once 'token.php';
+					<div class="wrap-input100 validate-input" >						
+					<?php
+					require_once 'token.php';
 
 
-$val = $_POST["token"];
+					$val = $_POST["token"];
 
 
-if(isset($_POST['updatepost'])){
-	if(token::checkToken($val,$_COOKIE['ssd'])){
-		/* echo $_POST['updatepost']; */
-	}
-	else{
-	echo "Error".$_COOKIE['ssd'];
-	}
-}
-?>
+					if(isset($_POST['updatepost'])){
+						if(token::checkToken($val,$_COOKIE['ssd'])){
+							 echo $_POST['updatepost']; 
+						}
+						else{
+						echo "Error".$_COOKIE['ssd'];
+						}
+					}
+					?>
 					
 				</form>
 			</div>

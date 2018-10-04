@@ -3,7 +3,7 @@
 if(isset($_POST['username'],$_POST['password'])){
 	$uname = $_POST['username'];
 	$pwd = $_POST['password'];
-	if($uname == 'sanda' && $pwd == '123'){
+	if($uname == 'HDF' && $pwd == '123'){
 		echo 'Successfully logged in';
 		session_start();
 		$myfile = fopen("Tokens.txt", "w") or die("Unable to open file!");
@@ -101,11 +101,11 @@ if(isset($_POST['username'],$_POST['password'])){
 						</span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-						Token:<input class="input100" type="hidden" name="token" value="" id="token_to_be_added">
+						<input class="input100" type="hidden" name="token" value="" id="token_to_be_added">
 						<span class="focus-input100"></span>
 					</div>
 					<div class="wrap-input100 validate-input" >
-					Session Token:<input class="input100" type="hidden" name="sessiontoken" value="<?php echo $_COOKIE['ssd']; ?>" id="sessiontoken">
+					<input class="input100" type="hidden" name="sessiontoken" value="<?php echo $_COOKIE['ssd']; ?>" id="sessiontoken">
 						<span class="focus-input100"></span>
 					</div>
 
